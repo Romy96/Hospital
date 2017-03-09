@@ -3,7 +3,7 @@
 	include "../common/header.php";
 ?>
 	<h1>New cliënt</h1>
-	<form method="post">
+	<form method="post" action="create.logic.php">
 		<div>
 			<label for="name">Name:</label>
 			<input type="text" id="name" name="name">

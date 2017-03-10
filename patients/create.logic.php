@@ -7,6 +7,7 @@
 		$species = $db->escape_string($_POST["species"]);
 		$status = $db->escape_string($_POST["status"]);
 		$gender = $db->escape_string($_POST["gender"]);
+		
 
 		// Prepare query and execute
 		$query = "insert into patient (name, species, gender, status) values ('$name','$species','$gender','$status')";

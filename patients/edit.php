@@ -11,9 +11,12 @@
 		</div>
 		<div>
 			<label for="species">Species:</label>
-			<select>
-			<option id="species" name="species"><?=$patient['species']?></option>
-			</select>
+			<input type="text" id="species" name="species" value="<?=$patient['species']?>">
+		</div>
+		<div>
+			<label for="gender">Geslacht:</label>
+			<input type="radio" name="gender" id="gender" value="man"> Male<br>
+  			<input type="radio" name="gender" id="gender" value="vrouw"> Female<br>
 		</div>
 		<div>
 			<label for="name">Species:</label>

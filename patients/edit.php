@@ -10,8 +10,10 @@
 			<input type="text" id="name" name="name" value="<?=$patient['name']?>">
 		</div>
 		<div>
-			<label for="name">Species:</label>
-			<input type="text" id="species" name="species" value="<?=$patient['species']?>">
+			<label for="species">Species:</label>
+			<select>
+			<option id="species" name="species"><?=$patient['species']?></option>
+			</select>
 		</div>
 		<div>
 			<label for="name">Species:</label>

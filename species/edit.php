@@ -7,7 +7,7 @@
 		<div>
 			<input type="hidden" name="id" value="<?=$species['id']?>">
 			<label for="species">Species:</label>
-			<input type="text" id="species" name="species" value="<?=$species['name']?>">
+			<input type="text" id="species" name="species" value="<?=$species['species']?>">
 		</div>
 		<div>
 			<label></label>

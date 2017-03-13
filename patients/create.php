@@ -5,8 +5,12 @@
 	<h1>New patiënt</h1>
 	<form method="post">
 		<div>
-			<label for="name">Name:</label>
-			<input type="text" id="name" name="name">
+			<label for="name_pet">Name pet:</label>
+			<input type="text" id="name_pet" name="name_pet">
+		</div>
+		<div>
+			<label for="name_client">Name client:</label>
+			<input type="text" id="name_client" name="name_client">
 		</div>
 		<div>
 			<label for="species">Species:</label>

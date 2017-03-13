@@ -3,14 +3,15 @@
 		$db = new mysqli('localhost','root','','hospital');
 		
 		// Prepare data for insertion
-		$name = $db->escape_string($_POST["name"]);
+		$name_pet = $db->escape_string($_POST["name_pet"]);
+		$name_client = $db->escape_string($_POST["name_client"]);
 		$species = $db->escape_string($_POST["species"]);
 		$status = $db->escape_string($_POST["status"]);
 		$gender = $db->escape_string($_POST["gender"]);
 		
 
 		// Prepare query and execute
-		$query = "insert into patient (name, species, gender, status) values ('$name','$species','$gender','$status')";
+		$query = "insert into patient (name_pet, name_client, species, gender, status) values ('$name_pet','$name_client','$species','$gender','$status')";
 		$result = $db->query($query);
 
 		if(!$result) {

@@ -7,7 +7,8 @@
 	<table>
 		<thead>
 			<tr>
-				<th>Name</th>
+				<th>Name pet</th>
+				<th>Name client</th>
 				<th>Species</th>
 				<th>Gender</th>
 				<th>Status</th>
@@ -20,7 +21,8 @@
 	foreach($patients as $patient):
 ?>
 			<tr>
-				<td><?=$patient['name']?></td>
+				<td><?=$patient['name_pet']?></td>
+				<td><?=$patient['name_client']?></td>
 				<td><?=$patient['species']?></td>
 				<td><?=$patient['gender']?></td>
 				<td><?=$patient['status']?></td>

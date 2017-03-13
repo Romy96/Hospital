@@ -7,8 +7,12 @@
 	<form method="post">
 		<div>
 			<input type="hidden" name="id" value="<?=$patient['id']?>">
-			<label for="name">Name:</label>
-			<span><?=$patient['name']?></span>
+			<label for="name_pet">Name:</label>
+			<span><?=$patient['name_pet']?></span>
+		</div>
+		<div>
+			<label for="name_client">Name_client:</label>
+			<span><?=$patient['name_client']?></span>
 		</div>
 		<div>
 			<label for="name">Species:</label>

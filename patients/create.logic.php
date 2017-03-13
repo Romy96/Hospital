@@ -8,7 +8,6 @@
 		$species = $db->escape_string($_POST["species"]);
 		$status = $db->escape_string($_POST["status"]);
 		$gender = $db->escape_string($_POST["gender"]);
-		
 
 		// Prepare query and execute
 		$query = "insert into patient (name_pet, name_client, species, gender, status) values ('$name_pet','$name_client','$species','$gender','$status')";
@@ -21,7 +20,7 @@
 		var_dump($result);
 	
     // Tell the browser to go back to the index page.
-    header("Location: ./");
+    //header("Location: ./");
     exit();
 	endif;
 

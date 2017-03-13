@@ -14,7 +14,30 @@
 		</div>
 		<div>
 			<label for="species">Species:</label>
-			<input type="text" id="species" name="species">
+			<?php
+				// Create connection
+				$db = new mysqli('localhost','root','','hospital');
+				// Check connection
+				if ($db->connect_error) {
+				     die("Connection failed: " . $db->connect_error);
+				} 
+
+				$sql = "SELECT * FROM species";
+				$result = $db->query($sql);
+
+				if ($result->num_rows > 0) {
+					echo "<select>";
+				     // output data of each row
+				     while($row = $result->fetch_assoc()) {
+				         echo "<option name='species' id='species'>" . $row["species"]. "</option>";
+				     }
+				     echo "</select>";
+				} else {
+				     echo "0 results";
+				}
+
+				$db->close();
+			?>  
 		</div>
 		<div>
 			<label for="gender">Geslacht:</label>

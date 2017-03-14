@@ -7,9 +7,9 @@
 	<table>
 		<thead>
 			<tr>
-				<th>Name pet</th>
-				<th>Name client</th>
-				<th>Species</th>
+				<th><a href="index.php?sort=name_pet">Name pet</a></th>
+				<th><a href="index.php?sort=name_client">Name client</a></th>
+				<th><a href="index.php?sort=species">Species</a></th>
 				<th>Gender pet</th>
 				<th>Status</th>
 				<th></th>

@@ -41,7 +41,7 @@
 			?>  
 		</div>
 		<div>
-			<label for="gender">Geslacht:</label>
+			<label for="gender">Geslacht huisdier:</label>
 			<input type="radio" name="gender" id="gender" value="man"> Male<br>
   			<input type="radio" name="gender" id="gender" value="vrouw"> Female<br>
 		</div>

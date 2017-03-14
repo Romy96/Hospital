@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Gegenereerd op: 10 mrt 2017 om 11:17
+-- Gegenereerd op: 14 mrt 2017 om 13:28
 -- Serverversie: 5.6.17
 -- PHP-versie: 5.5.12
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `client` (
   `name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `client`
@@ -39,9 +39,9 @@ CREATE TABLE IF NOT EXISTS `client` (
 
 INSERT INTO `client` (`id`, `name`) VALUES
 (1, 'Bobbie'),
-(21, 'Boeda'),
 (6, 'Kees'),
-(2, 'Minoes');
+(2, 'Minoes'),
+(22, 'Thomas');
 
 -- --------------------------------------------------------
 
@@ -51,24 +51,24 @@ INSERT INTO `client` (`id`, `name`) VALUES
 
 CREATE TABLE IF NOT EXISTS `patient` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) DEFAULT NULL,
+  `name_pet` varchar(50) DEFAULT NULL,
+  `name_client` varchar(50) DEFAULT NULL,
   `gender` varchar(10) DEFAULT NULL,
   `species` varchar(50) DEFAULT NULL,
   `status` text,
   PRIMARY KEY (`id`),
-  KEY `name` (`name`),
-  KEY `species` (`species`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+  KEY `species` (`species`),
+  KEY `name_client` (`name_client`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `patient`
 --
 
-INSERT INTO `patient` (`id`, `name`, `gender`, `species`, `status`) VALUES
-(1, 'Bobbie', NULL, 'hond', 'Koorts, eet slecht, blaft veel te veel'),
-(2, 'Minoes', NULL, 'kat', 'Drinkt niet, haaruitval, mager'),
-(3, 'Kees', NULL, 'hond', 'Eet te veel, vetzucht, jankt en kotst'),
-(5, 'Punky', 'female', 'kat', 'Aangereden door een auto. In kritieke toestand.');
+INSERT INTO `patient` (`id`, `name_pet`, `name_client`, `gender`, `species`, `status`) VALUES
+(1, 'Bobbie', NULL, 'man', 'hond', 'Koorts, eet slecht, blaft veel te veel'),
+(2, 'Minoes', NULL, 'vrouw', 'kat', 'Drinkt niet, haaruitval, mager'),
+(3, 'Kees', NULL, 'man', 'hond', 'Eet te veel, vetzucht, jankt en kotst');
 
 -- --------------------------------------------------------
 
@@ -91,6 +91,17 @@ INSERT INTO `species` (`id`, `species`) VALUES
 (1, 'hond'),
 (2, 'kat'),
 (5, 'reptiel');
+
+--
+-- Beperkingen voor geëxporteerde tabellen
+--
+
+--
+-- Beperkingen voor tabel `patient`
+--
+ALTER TABLE `patient`
+  ADD CONSTRAINT `FK_patient_client` FOREIGN KEY (`name_client`) REFERENCES `client` (`name`),
+  ADD CONSTRAINT `FK_patient_species` FOREIGN KEY (`species`) REFERENCES `species` (`species`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

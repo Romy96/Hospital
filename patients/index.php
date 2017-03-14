@@ -10,7 +10,7 @@
 				<th>Name pet</th>
 				<th>Name client</th>
 				<th>Species</th>
-				<th>Gender</th>
+				<th>Gender pet</th>
 				<th>Status</th>
 				<th></th>
 				<th></th>
